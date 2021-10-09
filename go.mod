@@ -1,5 +1,7 @@
 module github.com/apache/servicecomb-kie
 
+replace github.com/hashicorp/memberlist v0.2.5-0.20210921185642-7e2219b23f33 => github.com/ryaninvoker/memberlist v0.2.5-0.20211009070854-a89b7e415b91
+
 require (
 	github.com/emicklei/go-restful v2.12.0+incompatible
 	github.com/go-chassis/cari v0.5.0
@@ -9,6 +11,7 @@ require (
 	github.com/go-chassis/openlog v1.1.3
 	github.com/go-chassis/seclog v1.3.0
 	github.com/gofrs/uuid v4.0.0+incompatible
+	github.com/hashicorp/memberlist v0.2.5-0.20210921185642-7e2219b23f33 // indirect
 	github.com/hashicorp/serf v0.9.5
 	github.com/little-cui/etcdadpt v0.1.2
 	github.com/stretchr/testify v1.7.0
