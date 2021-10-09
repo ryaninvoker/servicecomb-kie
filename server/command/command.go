@@ -56,7 +56,7 @@ func ParseConfig(args []string) (err error) {
 			EnvVar:      "LISTEN_PEER_ADDR",
 		}, cli.StringFlag{
 			Name:        "advertise-addr",
-			Usage:       "advertise addr, example: --advertise-addr=127.0.0.1:9093",
+			Usage:       "advertise addr, example: --advertise-addr=127.0.0.1",
 			Destination: &config.Configurations.AdvertiseAddr,
 			EnvVar:      "ADVERTISE_ADDR",
 		},
