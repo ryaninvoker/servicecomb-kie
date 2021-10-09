@@ -55,14 +55,15 @@ type Bus struct {
 func Init() {
 	once.Do(func() {
 		ac := agent.DefaultConfig()
+		sc := serf.DefaultConfig()
 		if config.Configurations.ListenPeerAddr != "" {
 			ac.BindAddr = config.Configurations.ListenPeerAddr
 		}
 		openlog.Info("kie-conf advertiseAddr is: " + config.Configurations.AdvertiseAddr)
 		if config.Configurations.AdvertiseAddr != "" {
 			ac.AdvertiseAddr = config.Configurations.AdvertiseAddr
+			sc.MemberlistConfig.AdvertiseAddr = config.Configurations.AdvertiseAddr
 		}
-		sc := serf.DefaultConfig()
 		if config.Configurations.NodeName != "" {
 			sc.NodeName = config.Configurations.NodeName
 		}
