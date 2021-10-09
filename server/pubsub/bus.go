@@ -58,6 +58,7 @@ func Init() {
 		if config.Configurations.ListenPeerAddr != "" {
 			ac.BindAddr = config.Configurations.ListenPeerAddr
 		}
+		openlog.Info("kie-conf advertiseAddr is: " + config.Configurations.AdvertiseAddr)
 		if config.Configurations.AdvertiseAddr != "" {
 			ac.AdvertiseAddr = config.Configurations.AdvertiseAddr
 		}
