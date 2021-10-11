@@ -66,6 +66,7 @@ func Init() {
 			serfAdvertiseAddr := strings.Split(config.Configurations.AdvertiseAddr, ":")
 			setSerfAdvertiseAddr(sc, serfAdvertiseAddr[0])
 		}
+		openlog.Info("kie advertise addr is:" + sc.MemberlistConfig.AdvertiseAddr)
 		if config.Configurations.NodeName != "" {
 			sc.NodeName = config.Configurations.NodeName
 		}
