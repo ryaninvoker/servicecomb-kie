@@ -26,7 +26,7 @@ type Config struct {
 	NodeName       string
 	ListenPeerAddr string
 	PeerAddr       string
-	AdvertiseAddr  string `yaml:"advertiseAddr"`
+	AdvertiseAddr  string
 }
 
 //DB is yaml file struct to set persistent config
